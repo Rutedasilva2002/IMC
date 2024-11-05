@@ -11,7 +11,7 @@ function imc(){
         altura:formDados.get("altura"),
         classificacao:"",
         calcularIMC(){
-            if (this.altura > 3) this.altura=this.altura/1,00
+            if (this.altura > 3) this.altura=this.altura/100
             const imc = this.peso/this.altura**2;
             if (imc < 18.5 ) this.classificacao = "magreza";
             if (imc >= 18.5 &&  imc < 25 ) this.classificacao = "saudável"
@@ -29,5 +29,5 @@ function imc(){
     console.log(paciente)
     console.log(paciente.calcularIMC())
     let resposta=document.getElementById('resposta');
-    resposta.innerHTML="Seu IMC " +paciente.calcularIMC()+". " + "Sua classificação de peso " + paciente.classificacao;
+    resposta.innerHTML="Seu IMC " +paciente.calcularIMC()+". " + "Sua classificação de peso " + paciente.classificacao.;
 }
